@@ -1,0 +1,321 @@
+body {
+    font-family: Monospaced, sans-serif, "Times New Roman", Arial;
+}
+/*настройка головы*/
+nav {
+    width: 100%;
+    height: 60px;
+    background: mediumseagreen;
+}
+.logo {
+    color: #000;
+    font-size: 24px; /*размер шрифта*/
+    line-height: 60px; /*ширина текста, лучше делать равной высоте самой головы*/
+    padding-left: 385px; /*отступ слева*/
+    float: left;
+}
+.menu {
+    float: left; /*обтекание по левому краю*/
+    padding-left: 430px; /*отступ от лого*/
+}
+.menu li {
+    float: left;
+    line-height: 60px;
+    margin-right: 40px;
+    font-size: 16px;
+    text-transform: uppercase; /*все заглавные */
+}
+.main {
+    width: 100%;
+    height: calc(100% - 60px); /*выравние по высоте с учетом головы*/
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat,url(../img/bg.jpg) center/cover no-repeat ;
+}
+
+.title_container {
+    float: left;
+    margin: 430px 0 0 400px;
+    color: #2c384a;
+    text-align: center; /* расположение текста*/
+}
+
+.title_container h1 {
+    font-size: 60px;
+    font-weight: bold;/*сделать шрифт жирным*/
+}
+
+.title_container h4 {
+    margin-top: 40px;
+    font-size: 22px;
+    color: #79818d;
+}
+
+.title_container input{
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 5px; /*закругление рамки*/
+    color: #6d7682;
+    font-size: 13px; /*размер шрифта*/
+    padding: 0 16px; /* отступ с боков внутри рамки и автоматом по высоте*/
+    margin: 55px 15px 0 15px;
+}
+/*обо мне*/
+.about_me {
+    height: 720px;
+}
+
+.about_me h2 {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 35px;
+    color: #263244;
+}
+
+.line {
+    margin: 30px 920px 50px 900px;
+    border: 5px solid #d17700;
+    width: 70px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.photo {
+    text-align: center;
+}
+
+.characteristic {
+    text-align: center;
+    padding: 25px 570px 34px 570px;
+    font-size: 17px;
+    color: #3f495a;
+}
+
+.about_me input {
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6f707e;
+    background: url(../img/icon.png) no-repeat 5px 10px;
+    border-radius: 5px;
+    color: #6f707e;
+    font-size: 16px;
+    padding: 0 14px 0 25px;
+    margin: 0 870px 0 855px;
+}
+/*что я умею*/
+.skill {
+    width: 100%;
+    height: 520px;
+    background: url(../img/bg2.jpg) center/cover no-repeat;
+}
+
+.skill2 {
+    float: left;
+    margin-top: 80px;
+    color: #2c384a;
+    text-align: center; /* расположение текста*/
+}
+
+.skill h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #263244;
+}
+
+.table_skills {
+    width: 1200px;
+    margin: auto; /*расположение таблицы по центру*/
+}
+
+.skill_heading {
+    font-size: 17px;
+    color: #d17700;
+    margin: 40px 0 20px 0;
+}
+
+td {
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+th {
+    padding: 5px 0;
+}
+
+.case {
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+}
+.case h2 {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 35px;
+    color: #263244;
+}
+.case p {
+    text-align: center;
+    font-size: 16px;
+    color: #626976;
+    margin-bottom: 30px;
+}
+
+.case_img {
+    text-align: center;
+}
+article {
+    column-count: 2; /*делает 2 колонки, можно больше*/
+    column-width: 100px; /*ширина колонок*/
+    column-gap: 1px; /*отступ между колонками*/
+}
+
+.price {
+    width: 100%;
+    height: 800px;
+}
+
+.price h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: #263244;
+}
+
+.price h3 {
+    font-size: 25px;
+    margin: 20px 0 20px 500px;
+}
+
+.price select {
+    width: 850px;
+    height: 50px;
+    background: #8e8e8e;
+    font-size: 16px;
+    margin-left: 500px;
+}
+
+.price hr {
+    margin: 30px 0 20px 500px;
+    border: 1px solid #6a6a6a;
+    width: 850px;
+}
+
+.price table {
+    width: 1180px;
+    font-size: 16px;
+    margin: 30px 0 0 475px;
+    font-weight: bold;
+}
+
+.statistics {
+    width: 100%;
+    height: 520px;
+    background: url(../img/statistics.jpg) center/cover no-repeat;
+    float: left;
+}
+
+.statistics h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: #263244;
+}
+
+.table_statistics {
+    width: 1200px;
+    margin: auto; /*расположение таблицы по центру*/
+    text-align: center;
+    font-weight: bold;
+}
+
+.reviews {
+    width: 100%;
+    height: 520px;
+    float: left;
+}
+
+.reviews  h2{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: #263244;
+}
+
+.reviews_img {
+    text-align: center;
+}
+.reviews img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.reviews p {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.contacts {
+    width: 100%;
+    height: 800px;
+    background: url(../img/contacts.jpg);
+    float: left;
+    text-align: center;
+}
+.contacts h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: aliceblue;
+}
+
+.contacts p {
+    font-size: 16px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+.icon {
+    margin: 0 110px;
+}
+.contacts li {
+    display: inline;
+    margin: 20px 40px 20px 40px;
+}
+
+.table_contacts {
+    width: 900px;
+    margin: 20px 0 20px 405px;
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.contacts h3 {
+    font-size: 25px;
+    color: aliceblue;
+    margin: 10px 0;
+}
+.data {
+    height: 35px;
+    width: 350px;
+    font-size: 16px;
+    margin: 20px 10px;
+}
+
+.contacts textarea {
+    height: 80px;
+    width: 725px;
+    font-size: 16px;
+}
+
+.send {
+    height: 45px;
+    width: 120px;
+    background: none;
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: bold;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    margin-top: 20px;
+}

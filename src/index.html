@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title> Денис Балдин - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
@@ -20,40 +22,65 @@
         </div>
     </nav>
 </header>
-<div class="main"> <div class="title_container">
+<div class="main">
+    <div class="title_container">
     <h1>Привет <br> Я Денис Балдин</h1>
     <h4>Фулл стек веб-разработчик</h4>
     <input type="submit" value="Обо мне">
     <input type="submit" value="Мои работы">
 </div></div>
-<div>
+<div  class="about_me">
     <h2>ОБО МНЕ</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
+    <hr class="line">
+    <div class="photo">
+        <img src="img/photo.png"></div>
+    <p class="characteristic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <P class="characteristic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
     <input type="submit" value="Скачать резюме">
 </div>
-<div>
-    <h2>ЧТО Я УМЕЮ</h2>
-    <table>
-        <tr>
-            <th>Веб-дизайн</th>
-            <th>Разработка</th>
-            <th>CEO-Оптимизация</th>
-            <th>Маркетинг</th>
-        </tr>
-        <tr>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-    </table>
+<div class="skill">
+    <div class="skill2">
+        <h2>ЧТО Я УМЕЮ</h2>
+        <hr class="line">
+        <div>
+            <table class="table_skills">
+            <tr class="img">
+                <th><img src="img/laptop.png"></th>
+                <th><img src="img/sign.png"></th>
+                <th><img src="img/rocket.png"></th>
+                <th><img src="img/megafon.png"></th>
+            </tr>
+            <tr class="skill_heading">
+                <th>Веб-дизайн</th>
+                <th>Разработка</th>
+                <th>CEO-Оптимизация</th>
+                <th>Маркетинг</th>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            </tr>
+        </table></div>
+    </div>
 </div>
-<div>
+<div class="case">
     <h2>КЕЙСЫ</h2>
+    <hr class="line">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi nibh, bibendum quis ex quis, feugiat viverra arcu. Fusce ut.</p>
+    <div class="case_img"><img src="img/case.jpg"></div>
+    <article class="column">
+        <h5>CLIENT:</h5>
+        <p>Какая-то компания</p>
+        <h5>WEBSITE</h5>
+        https://ru.lipsum.com/feed/html
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum id felis sit amet ultrices. Cras porttitor velit ut lorem posuere lobortis. In fringilla congue libero, vel molestie lectus malesuada ut. Nullam sollicitudin, magna in sagittis eleifend, magna ante euismod lectus, porta rhoncus enim magna tempor mi.</p>
+    </article>
 </div>
-<div>
+<div class="price">
     <h2>РАСЧЁТ СТОИМОСТИ</h2>
+    <hr class="line">
     <h3>Тип сайта</h3>
     <select name="list1" id="list">
         <option>Выбирете пункт</option>
@@ -73,6 +100,7 @@
         <option>Под мобильные устройства</option>
         <option>Под ПК и мобильные устройства</option>
     </select>
+    <hr>
     <table>
         <tr>
             <td>Сроки</td>
@@ -84,9 +112,16 @@
         </tr>
     </table>
 </div>
-<div>
+<div class="statistics">
     <h2>НЕМНОГО СТАТИСТИКИ</h2>
-    <table>
+        <hr class="line">
+    <table class="table_statistics">
+        <tr class="img">
+            <th><img src="img/smile.png"></th>
+            <th><img src="img/sign_orange.png"></th>
+            <th><img src="img/mark.png"></th>
+            <th><img src="img/cup.png"></th>
+        </tr>
         <tr>
             <td>0</td>
             <td>0</td>
@@ -101,32 +136,40 @@
         </tr>
     </table>
 </div>
-<div>
+<div class="reviews">
     <h2>ОТЗЫВЫ</h2>
-    <img src="img/gref.jpg">
+    <hr class="line">
+    <div class="reviews_img"><img src="img/gref.jpg"></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <p>Герман Греф, Председатель правления «Сбербанка России»</p>
 </div>
-<div>
+<div class="contacts">
     <h2>МОИ КОНТАКТЫ</h2>
+    <hr class="line">
     <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</P>
-    <ul>
-        <li>Адрес:Россия, г. Александров</li>
-        <li>infoBaldin@yandex.ru</li>
-        <li>+8 900 111 11 11</li>
-    </ul>
+    <table class="table_contacts">
+        <tr>
+            <th><img src="img/geolocation.png"></th>
+            <th><img src="img/envelope.png"></th>
+            <th><img src="img/tube.png"></th>
+        </tr>
+        <tr>
+            <td>Адрес:Россия, г. Александров</td>
+            <td>infoBaldin@yandex.ru</td>
+            <td>+8 900 111 11 11</td>
+        </tr>
+    </table>
     <h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
     <form action="#">
-        <input type="text" name="text_input" value="" placeholder="Введите ваше имя">
-        <input type="email" name="email" value="" placeholder="Введите ваш Email"><br>
+        <input class="data" type="text" name="text_input" value="" placeholder="Введите ваше имя">
+        <input class="data" type="email" name="email" value="" placeholder="Введите ваш Email"><br>
         <textarea name="name1" id="1" cols="70" rows="10" placeholder="Сообщение"></textarea><br>
-        <input type="submit" value="Отправить">
-        <input type="reset" value="Очистить">
+        <input class="send" type="submit" value="Отправить">
     </form>
 </div>
 <footer>
     <div>
-        <h2>MAP</h2>
+        <img src="img/map.jpg">
     </div>
 </footer>
 </body>
