@@ -5,15 +5,40 @@ body {
 nav {
     width: 100%;
     height: 60px;
-    background: mediumseagreen;
+    background: dimgray;
+    position: fixed;
+    z-index: 9;
 }
 .logo {
     color: #000;
-    font-size: 24px; /*размер шрифта*/
+    font-size: 25px; /*размер шрифта*/
     line-height: 60px; /*ширина текста, лучше делать равной высоте самой головы*/
     padding-left: 385px; /*отступ слева*/
     float: left;
+    font-weight: bold;
+    animation: comming 1.5s ease;
+    -webkit-animation: comming 1.5s ease;
+    -o-animation: comming 1.5s ease;
 }
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -30px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
 .menu {
     float: left; /*обтекание по левому краю*/
     padding-left: 430px; /*отступ от лого*/
@@ -24,10 +49,37 @@ nav {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase; /*все заглавные */
+    font-weight: bold;
+    animation: topshift 0.4s ease forwards;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    opacity: 0;
+}
+.menu li a {
+    transition: all 0.2s;
+    color: black;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a:visited{
+    color: orange; /*посещённые ссылки становятся другого цвета*/
+}
+.menu li a:hover{
+    color: lawngreen; /*при нажатии*/
+}
+.menu li a:active {
+    transform: scale(1.15); /*меняет размер принажатии (в данном случае увеличивается)*/
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
 }
 .main {
     width: 100%;
-    height: calc(100% - 60px); /*выравние по высоте с учетом головы*/
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat,url(../img/bg.jpg) center/cover no-repeat ;
 }
 
@@ -36,6 +88,23 @@ nav {
     margin: 430px 0 0 400px;
     color: #2c384a;
     text-align: center; /* расположение текста*/
+    opacity: 0;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+}
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
 
 .title_container h1 {
@@ -56,14 +125,31 @@ nav {
     background: none;
     border-radius: 5px; /*закругление рамки*/
     color: #6d7682;
-    font-size: 13px; /*размер шрифта*/
+    font-size: 16px; /*размер шрифта*/
     padding: 0 16px; /* отступ с боков внутри рамки и автоматом по высоте*/
     margin: 55px 15px 0 15px;
+    font-weight: bold;
+    transition: all 0.2s;
+    transform: scale(1);
 }
+.title_container input:hover { /*активиреуется анимация при наведении*/
+    background: dimgray; /*при наведении меняет цвет фона*/
+    color: #FFC039; /*меняется цвет шрифта при наведении*/
+}
+.title_container input:active {
+    transform: scale(1.15);
+}
+
+
 /*обо мне*/
 .about_me {
     height: 720px;
+
+    animation: backInRight;
+    animation-duration: 7s;
 }
+
+
 
 .about_me h2 {
     margin-top: 80px;
@@ -101,6 +187,10 @@ nav {
     font-size: 16px;
     padding: 0 14px 0 25px;
     margin: 0 870px 0 855px;
+}
+
+.about_me input:active {
+    transform: scale(1.15);
 }
 /*что я умею*/
 .skill {
@@ -156,17 +246,17 @@ th {
 .case p {
     text-align: center;
     font-size: 16px;
-    color: #626976;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .case_img {
     text-align: center;
+    margin: 0 0 20px 0;
 }
-article {
-    column-count: 2; /*делает 2 колонки, можно больше*/
-    column-width: 100px; /*ширина колонок*/
-    column-gap: 1px; /*отступ между колонками*/
+#left {
+    column-count: 2;
+    width: 70%;
+    margin: 0 0 0 150px;
 }
 
 .price {
@@ -210,7 +300,8 @@ article {
 .statistics {
     width: 100%;
     height: 520px;
-    background: url(../img/statistics.jpg) center/cover no-repeat;
+
+    background: url(../img/statistics.jpg) center/cover fixed no-repeat; /*fixed создает эффект паралакса*/
     float: left;
 }
 
@@ -318,4 +409,109 @@ article {
     border: 2px solid aliceblue;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+.contacts input:active {
+    transform: scale(1.15);
+}
+
+.h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+
+
+.menu li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3) {
+    animation-delay: 0.7s;
+}
+.menu li:nth-child(4) {
+    animation-delay: 1s;
+}
+.menu li:nth-child(5) {
+    animation-delay: 1.3s;
+}
+.menu li:nth-child(6) {
+    animation-delay: 1.6s;
+}
+
+
+
+/*Стартовый загрузчик страницы*/
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
 }
